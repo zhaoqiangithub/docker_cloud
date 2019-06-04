@@ -44,15 +44,18 @@ public class FutureCooker {
             System.out.println("炒锅还没到不能做饭！！！等耐心等待快递小哥");
         }
 
+
+        Utensil utensil = null;
         try {
-            Utensil utensil = jdShoppingTask.get();// get会阻塞主线程，等待子线程的返回
-            System.out.println("4.1、"+utensil.getName()+"终于到了！可以做饭了");
-
-
+            utensil = jdShoppingTask.get();// get会阻塞主线程，等待子线程的返回
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
+        System.out.println("4.1、"+utensil.getName()+"终于到了！可以做饭了");
+
+
+
     }
 }
