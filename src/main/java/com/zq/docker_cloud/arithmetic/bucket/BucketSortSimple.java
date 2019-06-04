@@ -21,8 +21,8 @@ public class BucketSortSimple {
             bucket[sourceArr[i]]++;
         }
 
-        System.out.println("zhaoqiandfdsafsdg".hashCode());
-        System.out.println(2<<30);
+//        System.out.println("zhaoqiandfdsafsdg".hashCode());
+//        System.out.println(2<<30);
         //遍历桶(从小打大)  循环11次  桶的个数  m+n次
         for (int i = 0; i < bucket.length; i++) {
             if(bucket[i]!=0){
